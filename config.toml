@@ -1,0 +1,12 @@
+baseURL = "https://eternal01.github.io/"
+languageCode = "en-us"
+title = "穆小康"
+theme = "hugo-book"
+
+[params]
+  AuthorName = '穆小康'
+  GitHubUser = 'eternal01'
+  SidebarRecentLimit = 5
+  Subtitle = 'new'
+[permalinks]
+  posts = '/:year/:month/:title/'
