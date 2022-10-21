@@ -367,9 +367,11 @@ Redis提供持久化策略，用一些适当的手段在适当的时机将数据
             appendfilename：配置操作日志文件
 
 ## **Redis淘汰策略**
-
-## **Redis对比关系型数据库（如Mysql）优势是什么？劣势是什么？对比其他NoSql类型数据库呢？**
-1. **速度快**
-2. **支持数据类型丰富**
-
-
+- noeviction 内存超过配置大小直接返回错误，不进行淘汰
+- allkeys-lru 内存超限时，使用lru算法淘汰最近最少使用的键
+- volatile-lru 内存超限时，使用lru算法淘汰设置了过期时间并且最近最少使用的键
+- allkeys-random 内存超限时，随机淘汰键
+- volatile-random 内存超限时，随机淘汰设置了过期时间的键
+- volatile-ttl 淘汰快到过期时间的键
+- volatile-lfu 淘汰设置了过期时间并且使用频率最低的键
+- allkeys-lfu 淘汰使用频率最低的键
