@@ -4,6 +4,19 @@ date: 2022-10-16T10:25:55Z
 # bookComments: false
 # bookSearchExclude: false
 ---
+
+## **Git基本概念**
+- 工作区(Workspace)
+- 暂存区(Index)
+- 版本库(Repository)
+
+- Commit
+- Tree
+- Blob
+
+- HEAD
+- Branch
+- Tag
 ## **Git配置**
 ```zsh
 git config --global user.name ""
@@ -27,4 +40,32 @@ git commit -m "描述"
 拉取远程文件
 ```zsh
 git pull originname originbranchname
+```
+合并分支
+```zsh
+git merge branchname
+```
+分支变基
+```zsh
+git rebase branchname
+```
+修改分支名
+```zsh
+git branch -m branchname newname
+```
+删除分支
+```zsh
+git branch -d branchname
+```
+
+```zsh
+git branch -D branchname
+```
+切换分支
+```zsh
+git checkout branchname
+```
+
+```zsh
+git switch branchname
 ```
